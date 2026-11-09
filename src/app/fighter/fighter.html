@@ -1,0 +1,17 @@
+<table id="table">
+  @for (i of [].constructor(amountOfMons); track $index) {
+    <tr>
+      @if ($index < mons().length) {
+        <td>
+          <img [src]="allMons.get(mons()[$index].name)" />
+        </td>
+        <td>{{ mons()[$index].health }}</td>
+        <td>{{ mons()[$index].attack }}</td>
+      } @else {
+        <td></td>
+        <td></td>
+        <td></td>
+      }
+    </tr>
+  }
+</table>

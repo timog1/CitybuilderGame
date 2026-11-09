@@ -1,0 +1,22 @@
+.shop {
+  width: 100%;
+  max-height: 300px;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+.building-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.building-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 80px;
+}

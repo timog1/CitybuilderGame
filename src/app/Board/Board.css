@@ -1,0 +1,33 @@
+
+.board-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns:  repeat(var(--cols), var(--tile-size-x));
+  grid-template-rows:  repeat(var(--rows), var(--tile-size-y));
+
+
+  width: max-content;
+  height: max-content;
+
+  gap: 0;
+}
+
+.tile {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.building {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+
+  pointer-events: none;
+}

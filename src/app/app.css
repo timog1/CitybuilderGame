@@ -1,0 +1,52 @@
+main {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.containerGrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  height: fit-content;
+  width: fit-content;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+
+app-board {
+  grid-column: 1;
+  grid-row: 1 / 4;
+
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+app-shop {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+app-mons {
+  grid-column: 2;
+  grid-row: 2;
+}
+app-fighter {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+app-nextRound {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+app-shop,
+app-mons,
+app-nextRound {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}

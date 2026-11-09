@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<table id="table">
+  @for (mon of mons(); track mon) {
+    <tr>
+      @if ($index < (mons()?.length || 0)) {
+        <td>
+          <img [src]="allMons.get(mon.name)" />
+        </td>
+        <td>{{ mon.health }}</td>
+        <td>{{mon.attack}}</td>
+      } @else {
+        <td></td>
+        <td></td>
+        <td></td>
+      }
+
+    </tr>
+  }
+</table>

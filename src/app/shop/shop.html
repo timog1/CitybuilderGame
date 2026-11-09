@@ -1,0 +1,39 @@
+<div class="shop">
+
+
+
+
+  <div class="building-list">
+    <p>{{this.money()}}</p>
+    <p>Buildings</p>
+    @for (build of building.keys(); track build) {
+
+      <div class="building-item">
+
+        <button (click)="buyBuilding(build)">
+          {{ building.get(build)?.infos?.name }}
+        </button>
+
+        <p>{{ building.get(build)?.infos?.price }}</p>
+
+      </div>
+
+    }
+    <p>Mons</p>
+    @for (mon of mons.keys(); track mon) {
+
+      <div class="building-item">
+
+        <button (click)="buyMons(mon)">
+          {{ mon }}
+        </button>
+
+        <p>{{ mons.get(mon) }}</p>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

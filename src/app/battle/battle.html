@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+  @if (overlayService.showFight()) {
+<div class="new-site">
+  <app-mons [mons]="this.playerMons"></app-mons>
+  <app-mons [mons]="this.attackteam"></app-mons>
+</div>
+  }
